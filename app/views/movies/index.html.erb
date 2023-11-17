@@ -1,0 +1,28 @@
+
+<div class="banner">
+  <%= image_tag "movie-banner.jpeg", alt: "PepitoFlix-banner", class: "background-image"%>
+  <div class="text-overlay">
+    <h1>PepitoFlix</h1>
+    <h2>Your Movies Paradise</h2>
+  </div>
+</div>
+
+<div class="movies-grid">
+  <% @movies.each do |movie| %>
+    <%= link_to movie_path(movie) do %>
+      <div class="movie-card">
+        <img src="<%= movie.poster_url %>" alt="<%= movie.title %> Poster">
+        <div class="movie-info">
+          <h3><%= movie.title %></h3>
+          <p class="overview"><%= movie.overview %></p>
+          <p class="rating"><strong>Rating:</strong> <%= movie.rating %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+  <div class="add_movie">
+  <%= link_to 'Add a new Movie', new_movie_path, class: 'btn btn-primary' %>
+</div>

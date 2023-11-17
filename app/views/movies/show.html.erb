@@ -1,0 +1,16 @@
+<div class="movie-details">
+  <h1><%= @movie.title %></h1>
+  <img src="<%= @movie.poster_url %>" alt="<%= @movie.title %> Poster" class="movie-poster">
+  <div class="movie-info">
+    <p><strong>Overview:</strong> <%= @movie.overview %></p>
+    <p><strong>Rating:</strong> <%= @movie.rating %></p>
+  </div>
+</div>
+
+<div class="button-delete">
+  <%= link_to 'Delete', @movie, method: :delete, data: { confirm: "Are you sure you want to delete '#{@movie.title}'?" }, class: 'btn btn-danger' %>
+</div>
+<br>
+<div class="button-back">
+  <%= link_to 'Back to Movies', movies_path, class: 'btn btn-primary' %>
+</div>

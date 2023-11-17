@@ -1,0 +1,19 @@
+<!-- app/views/movies/new.html.erb -->
+<div class="new-title">
+<h1>Create a New Movie</h1>
+
+<div class="form-new-movie">
+<%= simple_form_for @movie, url: movies_path do |form| %>
+  <%= form.input :title %>
+  <%= form.input :overview %>
+  <%= form.input :poster_url %>
+  <%= form.input :rating, as: :numeric, input_html: { min: 0, max: 5, step: 0.1 } %>
+
+  <div class="actions">
+    <%= form.button :submit, class: 'btn btn-primary' %>
+  </div>
+  </div>
+<br>
+<br>
+  <%= link_to 'Back to Movies', movies_path, class: 'btn btn-primary' %>
+<% end %>
