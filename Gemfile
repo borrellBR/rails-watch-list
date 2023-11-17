@@ -72,3 +72,5 @@ gem "simple_form"
 gem "sassc-rails" # Uncomment this line
 
 #gem 'faker'
+
+  gem "dotenv-rails"
