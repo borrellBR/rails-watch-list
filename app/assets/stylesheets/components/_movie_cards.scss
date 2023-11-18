@@ -11,6 +11,8 @@ body {
     margin: 30px;
   }
 
+
+
   .movie-card {
     max-width: 400px;
     height: auto;
@@ -76,6 +78,11 @@ body {
     }
   }
 
+  .choose-file{
+    text-align: center;
+    margin-left: 90px;
+  }
+
   .movie-details {
     margin: 30px;
 
@@ -90,6 +97,8 @@ body {
       &:hover {
         transform: scale(1.1);
       }
+
+
 
       img {
         width: 100%;
